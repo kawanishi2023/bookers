@@ -1,0 +1,27 @@
+<div class='NG'>
+
+<% if @list.errors.any? %>
+  【error:<%= @list.errors.count %>件のエラーが発生しました】
+  <ul>
+    <% @list.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+</div>
+
+<h1>投稿を編集する</h1>
+<%= form_with model: @list, url:book_path(@list.id), method: :patch do |f| %>
+  <h4>Title</h4>
+  <%= f.text_field :title %>
+
+  <h4>Body</h4>
+  <%= f.text_area :body %>
+
+  <%= f.submit 'Update Book' %>
+
+<% end %>
+
+<%= link_to "show", book_path(@list.id) %>
+<%= link_to "back", '/books' %>

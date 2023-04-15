@@ -1,0 +1,13 @@
+<div class='OK'>
+<%= flash[:notice] %>
+</div>
+
+<h1>投稿詳細ページ</h1>
+
+<h2>Title</h2>
+<p><%= @list.title %></p>
+
+<h2>Body</h2>
+<p><%= @list.body %></p>
+<%= link_to "edit", edit_book_path(@list.id) %>
+<%= link_to "back", '/books' %>

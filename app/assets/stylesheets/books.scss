@@ -1,0 +1,24 @@
+.parent {
+ display: flex;
+ justify-content: space-around;
+}
+ 
+.child{
+ color: black;
+ border: solid 1px #fff;
+ text-align: center;
+ line-height: auto;
+ width: auto;
+ height: auto;
+ background-color: white;
+}
+
+.OK{
+  color:green;
+  font-size: 200%
+}
+
+.NG{
+  color:red;
+  font-size: 200%
+}
